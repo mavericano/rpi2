@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/styles.css" rel="stylesheet">
+    <title>Space</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__controls">
+            <div class="header__left-arrow" onclick="movePrevious()">Previous day</div>
+            <div id="date" class="header__current-date"></div>
+            <div class="header__right-arrow" onclick="moveNext()">Next day</div>
+        </div>
+        <div class="header__calendar">
+            <form class="header__form" onsubmit="return false" id="search-form">
+                <label class="header__form_date-label">
+                    Select date
+                    <br>
+                    <input class="header__form_input" max="" id="date-input" type="date" required>
+                </label>
+                <button class="header__form_button" type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <section id="content" class="content content__info">
+            <div class="content__img">
+                <img id="daily-img" src="assets/Beyond Light.jpg" alt="">
+            </div>
+            <div class="content__text">
+                <h1 id="subheader" class="content__subheader">Lorem ipsum bla bla bla</h1>
+                <p id="text" class="content__info-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim obcaecati, vitae dolore qui voluptatem quidem officiis atque dicta quasi ipsa placeat reiciendis fugiat quibusdam libero praesentium. Doloribus quas nesciunt eius?</p>
+            </div>
+        </section>
+        <section id="content-error" class="content content__error">
+            Nothing found
+        </section>
+        <section id="content-connection-error" class="content content__error">
+            Connection error
+        </section>
+        <section id="content-loader" class="content content__loader">
+            <div class="content__spinner"></div>
+        </section>
+    </main>
+    <script src="assets/script.js"></script>
+</body>
+</html>
