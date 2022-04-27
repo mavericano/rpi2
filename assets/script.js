@@ -73,13 +73,13 @@ const updateData = (data) => {
         switch (data.media_type) {
             case "image":
                 elem = document.getElementById("daily-img")
-                // document.getElementById("img-of-day__video").classList.remove("active")
+                document.getElementById("daily-video").classList.remove("active")
                 elem.attributes.src.value = data.url
                 elem.classList.add("active")
                 break;
             case "video":
-                elem = document.getElementById("img-of-day__video")
-                document.getElementById("img-of-day").classList.remove("active")
+                elem = document.getElementById("daily-video")
+                document.getElementById("daily-img").classList.remove("active")
                 elem.attributes.src.value = data.url
                 elem.classList.add("active")
                 break;

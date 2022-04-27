@@ -108,7 +108,7 @@ body {
     font-weight: 700;
 }
 
-#daily-img {
+#daily-img, #daily-video {
     width: 1000px;
     height: 562px;
     border-top-left-radius: 100px;
@@ -116,7 +116,12 @@ body {
     border-color: #fff;
     border-style: solid;
     border-width: 1px;
-    /* Make border color opposite to picture main color */
+    display: none;
+}
+
+#daily-img.active,
+#daily-video.active {
+    display: block;
 }
 
 .content__spinner {
@@ -143,4 +148,5 @@ body {
 .content__error {
     color: #fff;
     font-family: 'JetBrains Mono';
+    display: none;
 }
